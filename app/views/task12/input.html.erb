@@ -1,2 +1,8 @@
 <h1>Task12#input</h1>
-<p>Find me in app/views/task12/input.html.erb</p>
+<%= form_tag("/task12/output", :method => "get") do %>
+<%= label_tag("Input quantity of numbers:") %>
+<%= number_field_tag(:digit, nil, min: 1) %>
+<%= submit_tag("Enter") %>
+<% end %>
+<%= link_to "To userlist", users_index_path %>
+<%= link_to "Log out", sessions_exit_path %>

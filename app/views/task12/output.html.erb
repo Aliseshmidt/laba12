@@ -1,2 +1,21 @@
 <h1>Task12#output</h1>
-<p>Find me in app/views/task12/output.html.erb</p>
+<p>Изначальные данные:</p>
+<p><%= @input %></p>
+<p>Результат:</p>
+<table>
+  <tr>
+    <th>№</th>
+    <th>Number</th>
+  </tr>
+ <% @digits.each do |number| %>
+  <tr>
+    <td><%= number[0][:index] %></td>         
+    <td><%= number[0].first[1] %></td>
+  </tr>
+  <% end %>
+</table>
+<p><%= @db %></p>
+<br>
+<%= link_to "Выбрать другое число", task12_input_path %>
+<%= link_to "To userlist", users_index_path %>
+<%= link_to "Log out", sessions_exit_path %>
